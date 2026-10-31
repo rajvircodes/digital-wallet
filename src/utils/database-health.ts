@@ -1,5 +1,5 @@
 import { pool } from "../config/database.js";
-export function checkDatabaseConnection():Promise<Boolean>{
+export async function checkDatabaseConnection():Promise<Boolean>{
     try {
         await pool.query("SELECT 1");
 
